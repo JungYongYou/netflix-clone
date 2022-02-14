@@ -1,7 +1,12 @@
-import React from 'react';
+import './home.scss';
+import { AcUnit } from '@material-ui/icons';
 
 const Home = () => {
-	return <div>hello</div>;
+	return (
+		<div className="home">
+			<AcUnit />
+		</div>
+	);
 };
 
 export default Home;
