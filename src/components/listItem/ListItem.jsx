@@ -22,20 +22,17 @@ const ListItem = ({ index }) => {
 					></iframe>
 					<div className="itemInfo">
 						<div className="icons">
-							<PlayArrow />
-							<Add />
-							<ThumbUpAltOutlined />
-							<ThumbDownOutlined />
+							<PlayArrow className="icon" />
+							<Add className="icon" />
+							<ThumbUpAltOutlined className="icon" />
+							<ThumbDownOutlined className="icon" />
 						</div>
 						<div className="itemInfoTop">
 							<span>1 hour 14 mins</span>
 							<span className="limit">+18</span>
 							<span>2022</span>
 						</div>
-						<div className="desc">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora facilis id laboriosam modi dolore mollitia illum velit provident beatae amet
-							consectetur dolorum numquam hic architecto nesciunt, ullam, ex accusamus!
-						</div>
+						<div className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempora facilis id laboriosam</div>
 						<div className="genre">Horror</div>
 					</div>
 				</>
