@@ -1,7 +1,11 @@
 import './watch.scss';
 import { ArrowBackOutlined } from '@material-ui/icons';
+import { useLocation } from 'react-router-dom';
 
 const Watch = () => {
+	const { state } = useLocation();
+	const movie = state?.movie;
+
 	return (
 		<div className="watch">
 			<div className="back">
@@ -12,7 +16,7 @@ const Watch = () => {
 			<iframe
 				width="100%"
 				height="100%"
-				src="https://www.youtube.com/embed/U1K9SZr6Ej4?autoplay=1&mute=1"
+				src={movie.video}
 				title="YouTube video player"
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
