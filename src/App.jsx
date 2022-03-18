@@ -11,11 +11,15 @@ const App = () => {
 		<Router>
 			<Routes>
 				<Route path="/" element={user ? <Home /> : <Navigate replace to="/register" />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/movies" element={<Home type="movies" />} />
-				<Route path="/series" element={<Home type="series" />} />
-				<Route path="/watch" element={<Watch />} />
+				<Route path="/register" element={!user ? <Register /> : <Navigate replace to="/" />} />
+				<Route path="/login" element={!user ? <Login /> : <Navigate replace to="/" />} />
+				{user && (
+					<>
+						<Route path="/movies" element={<Home type="movies" />} />
+						<Route path="/series" element={<Home type="series" />} />
+						<Route path="/watch" element={<Watch />} />
+					</>
+				)}
 			</Routes>
 		</Router>
 	);
